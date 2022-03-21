@@ -1,0 +1,104 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	HAP1	huntingtin associated protein 1 [Source:HGNC Symbol;Acc:HGNC:4812]	168	1.2770342826843262	0.042551525	Yes	
+row_1	EPG5	ectopic P-granules autophagy protein 5 homolog [Source:HGNC Symbol;Acc:HGNC:29331]	752	0.728685200214386	0.03294859	Yes	
+row_2	SRPX	sushi repeat containing protein X-linked [Source:HGNC Symbol;Acc:HGNC:11309]	1049	0.6202511191368103	0.038702805	Yes	
+row_3	LRRK2	leucine rich repeat kinase 2 [Source:HGNC Symbol;Acc:HGNC:18618]	1176	0.5817331671714783	0.054645564	Yes	
+row_4	MAP1LC3B2	microtubule associated protein 1 light chain 3 beta 2 [Source:HGNC Symbol;Acc:HGNC:34390]	1339	0.5379686951637268	0.0662256	Yes	
+row_5	FOXO1	forkhead box O1 [Source:HGNC Symbol;Acc:HGNC:3819]	1416	0.5183566808700562	0.08295448	Yes	
+row_6	PIK3R4	phosphoinositide-3-kinase regulatory subunit 4 [Source:HGNC Symbol;Acc:HGNC:8982]	1557	0.49254536628723145	0.094135575	Yes	
+row_7	FNBP1L	formin binding protein 1 like [Source:HGNC Symbol;Acc:HGNC:20851]	1779	0.453635573387146	0.098030135	Yes	
+row_8	NPC1	NPC intracellular cholesterol transporter 1 [Source:HGNC Symbol;Acc:HGNC:7897]	1865	0.440381795167923	0.110821344	Yes	
+row_9	NHLRC1	NHL repeat containing E3 ubiquitin protein ligase 1 [Source:HGNC Symbol;Acc:HGNC:21576]	2015	0.41859591007232666	0.11823574	Yes	
+row_10	BNIP3	BCL2 interacting protein 3 [Source:HGNC Symbol;Acc:HGNC:1084]	2133	0.3999203145503998	0.12708274	Yes	
+row_11	ATG4C	autophagy related 4C cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:16040]	2421	0.3658180832862854	0.12265693	Yes	
+row_12	PIK3CB	"phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta [Source:HGNC Symbol;Acc:HGNC:8976]"	2662	0.3348526060581207	0.12018511	Yes	
+row_13	LIX1L	limb and CNS expressed 1 like [Source:HGNC Symbol;Acc:HGNC:28715]	2804	0.31878072023391724	0.12391669	Yes	
+row_14	TRAPPC8	trafficking protein particle complex subunit 8 [Source:HGNC Symbol;Acc:HGNC:29169]	3046	0.292974591255188	0.11959672	Yes	
+row_15	NBR1	NBR1 autophagy cargo receptor [Source:HGNC Symbol;Acc:HGNC:6746]	3064	0.29126226902008057	0.13078445	Yes	
+row_16	ACBD5	acyl-CoA binding domain containing 5 [Source:HGNC Symbol;Acc:HGNC:23338]	3734	0.22934360802173615	0.09399224	No	
+row_17	SUPT20H	"SPT20 homolog, SAGA complex component [Source:HGNC Symbol;Acc:HGNC:20596]"	3779	0.22569149732589722	0.100517124	No	
+row_18	WDFY3	WD repeat and FYVE domain containing 3 [Source:HGNC Symbol;Acc:HGNC:20751]	4062	0.20444358885288239	0.08958538	No	
+row_19	ABL1	"ABL proto-oncogene 1, non-receptor tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:76]"	4134	0.19864824414253235	0.09308371	No	
+row_20	PIK3C3	phosphatidylinositol 3-kinase catalytic subunit type 3 [Source:HGNC Symbol;Acc:HGNC:8974]	4146	0.1980358213186264	0.10072937	No	
+row_21	ZKSCAN3	zinc finger with KRAB and SCAN domains 3 [Source:HGNC Symbol;Acc:HGNC:13853]	4313	0.18526193499565125	0.0970514	No	
+row_22	ARSB	arylsulfatase B [Source:HGNC Symbol;Acc:HGNC:714]	4334	0.18372340500354767	0.103463195	No	
+row_23	ATG12	autophagy related 12 [Source:HGNC Symbol;Acc:HGNC:588]	4498	0.17074410617351532	0.099377304	No	
+row_24	IRGM	immunity related GTPase M [Source:HGNC Symbol;Acc:HGNC:29597]	4730	0.15468665957450867	0.08987966	No	
+row_25	UVRAG	UV radiation resistance associated [Source:HGNC Symbol;Acc:HGNC:12640]	4848	0.14535437524318695	0.087915	No	
+row_26	DRAM1	DNA damage regulated autophagy modulator 1 [Source:HGNC Symbol;Acc:HGNC:25645]	4862	0.14400890469551086	0.093126975	No	
+row_27	RAB33B	"RAB33B, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:16075]"	4906	0.14092415571212769	0.096121274	No	
+row_28	PRKAA1	protein kinase AMP-activated catalytic subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:9376]	5104	0.12819823622703552	0.08786353	No	
+row_29	TECPR1	tectonin beta-propeller repeat containing 1 [Source:HGNC Symbol;Acc:HGNC:22214]	5279	0.1171208918094635	0.0807351	No	
+row_30	SPATA18	spermatogenesis associated 18 [Source:HGNC Symbol;Acc:HGNC:29579]	5299	0.11564642190933228	0.08432516	No	
+row_31	TECPR2	tectonin beta-propeller repeat containing 2 [Source:HGNC Symbol;Acc:HGNC:19957]	5355	0.11178461462259293	0.0852472	No	
+row_32	ATG2B	autophagy related 2B [Source:HGNC Symbol;Acc:HGNC:20187]	5386	0.11039106547832489	0.08784895	No	
+row_33	TBC1D5	TBC1 domain family member 5 [Source:HGNC Symbol;Acc:HGNC:19166]	5443	0.10773523151874542	0.08852945	No	
+row_34	OPTN	optineurin [Source:HGNC Symbol;Acc:HGNC:17142]	5683	0.09305881708860397	0.075857975	No	
+row_35	TFEB	transcription factor EB [Source:HGNC Symbol;Acc:HGNC:11753]	5700	0.09211952984333038	0.07865749	No	
+row_36	CLEC16A	C-type lectin domain containing 16A [Source:HGNC Symbol;Acc:HGNC:29013]	5807	0.08485110104084015	0.07488831	No	
+row_37	HDAC6	histone deacetylase 6 [Source:HGNC Symbol;Acc:HGNC:14064]	5903	0.07917902618646622	0.071643345	No	
+row_38	CISD2	CDGSH iron sulfur domain 2 [Source:HGNC Symbol;Acc:HGNC:24212]	5957	0.07571353018283844	0.07117252	No	
+row_39	VMP1	vacuole membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:29559]	6047	0.0700024738907814	0.06795515	No	
+row_40	PTPN22	protein tyrosine phosphatase non-receptor type 22 [Source:HGNC Symbol;Acc:HGNC:9652]	6139	0.06432124972343445	0.064357385	No	
+row_41	PINK1	PTEN induced kinase 1 [Source:HGNC Symbol;Acc:HGNC:14581]	6237	0.05834760144352913	0.06008857	No	
+row_42	ARSA	arylsulfatase A [Source:HGNC Symbol;Acc:HGNC:713]	6287	0.055672787129879	0.059044827	No	
+row_43	ATG5	autophagy related 5 [Source:HGNC Symbol;Acc:HGNC:589]	6527	0.04089748486876488	0.044158008	No	
+row_44	CLN3	"CLN3 lysosomal/endosomal transmembrane protein, battenin [Source:HGNC Symbol;Acc:HGNC:2074]"	6530	0.040614813566207886	0.045743845	No	
+row_45	WIPI2	"WD repeat domain, phosphoinositide interacting 2 [Source:HGNC Symbol;Acc:HGNC:32225]"	6756	0.027037685737013817	0.031242164	No	
+row_46	USP30	ubiquitin specific peptidase 30 [Source:HGNC Symbol;Acc:HGNC:20065]	6790	0.024390900507569313	0.029982736	No	
+row_47	MARK2	microtubule affinity regulating kinase 2 [Source:HGNC Symbol;Acc:HGNC:3332]	6820	0.02248140051960945	0.02892043	No	
+row_48	WIPI1	"WD repeat domain, phosphoinositide interacting 1 [Source:HGNC Symbol;Acc:HGNC:25471]"	7115	0.005320913158357143	0.008697086	No	
+row_49	MAP1LC3B	microtubule associated protein 1 light chain 3 beta [Source:HGNC Symbol;Acc:HGNC:13352]	7137	0.004187406972050667	0.0074142627	No	
+row_50	TMEM59	transmembrane protein 59 [Source:HGNC Symbol;Acc:HGNC:1239]	7227	-0.0013129032449796796	0.0012795797	No	
+row_51	ATG14	autophagy related 14 [Source:HGNC Symbol;Acc:HGNC:19962]	7321	-0.007216874975711107	-0.0048825783	No	
+row_52	AMBRA1	autophagy and beclin 1 regulator 1 [Source:HGNC Symbol;Acc:HGNC:25990]	7324	-0.0073525565676391125	-0.0047094193	No	
+row_53	TBC1D25	TBC1 domain family member 25 [Source:HGNC Symbol;Acc:HGNC:8092]	7327	-0.007538310252130032	-0.004528371	No	
+row_54	ATG2A	autophagy related 2A [Source:HGNC Symbol;Acc:HGNC:29028]	7358	-0.009450734592974186	-0.0062136557	No	
+row_55	TBC1D17	TBC1 domain family member 17 [Source:HGNC Symbol;Acc:HGNC:25699]	7416	-0.0128068458288908	-0.009634403	No	
+row_56	SQSTM1	sequestosome 1 [Source:HGNC Symbol;Acc:HGNC:11280]	7473	-0.015586981549859047	-0.01286752	No	
+row_57	USP13	ubiquitin specific peptidase 13 [Source:HGNC Symbol;Acc:HGNC:12611]	7679	-0.02695111371576786	-0.025981767	No	
+row_58	IFI16	interferon gamma inducible protein 16 [Source:HGNC Symbol;Acc:HGNC:5395]	7719	-0.029491016641259193	-0.02744192	No	
+row_59	USP10	ubiquitin specific peptidase 10 [Source:HGNC Symbol;Acc:HGNC:12608]	7738	-0.030793234705924988	-0.027386103	No	
+row_60	RNF185	ring finger protein 185 [Source:HGNC Symbol;Acc:HGNC:26783]	7741	-0.03103061020374298	-0.026207315	No	
+row_61	WDR45	WD repeat domain 45 [Source:HGNC Symbol;Acc:HGNC:28912]	7864	-0.039333682507276535	-0.033022553	No	
+row_62	FUNDC1	FUN14 domain containing 1 [Source:HGNC Symbol;Acc:HGNC:28746]	8178	-0.057552192360162735	-0.05234914	No	
+row_63	RAB12	"RAB12, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:31332]"	8181	-0.057683300226926804	-0.050038386	No	
+row_64	FBXO7	F-box protein 7 [Source:HGNC Symbol;Acc:HGNC:13586]	8334	-0.06783820688724518	-0.057729676	No	
+row_65	GABARAPL1	GABA type A receptor associated protein like 1 [Source:HGNC Symbol;Acc:HGNC:4068]	8407	-0.07139892876148224	-0.059705295	No	
+row_66	RNF41	ring finger protein 41 [Source:HGNC Symbol;Acc:HGNC:18401]	8598	-0.08217891305685043	-0.069430634	No	
+row_67	ATG7	autophagy related 7 [Source:HGNC Symbol;Acc:HGNC:16935]	8834	-0.09810266643762589	-0.081609674	No	
+row_68	ATG4A	autophagy related 4A cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:16489]	8867	-0.0997612476348877	-0.079598494	No	
+row_69	STK11	serine/threonine kinase 11 [Source:HGNC Symbol;Acc:HGNC:11389]	9351	-0.12952418625354767	-0.10769281	No	
+row_70	SESN2	sestrin 2 [Source:HGNC Symbol;Acc:HGNC:20746]	9524	-0.14106225967407227	-0.11366531	No	
+row_71	LAMP1	lysosomal associated membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:6499]	9645	-0.1492559164762497	-0.11567294	No	
+row_72	TOLLIP	toll interacting protein [Source:HGNC Symbol;Acc:HGNC:16476]	9757	-0.15758422017097473	-0.11670085	No	
+row_73	SIRT2	sirtuin 2 [Source:HGNC Symbol;Acc:HGNC:10886]	9897	-0.1670946329832077	-0.1192724	No	
+row_74	ATG3	autophagy related 3 [Source:HGNC Symbol;Acc:HGNC:20962]	10065	-0.17784732580184937	-0.12333484	No	
+row_75	MFN2	mitofusin 2 [Source:HGNC Symbol;Acc:HGNC:16877]	10225	-0.18860700726509094	-0.12638386	No	
+row_76	GABARAPL2	GABA type A receptor associated protein like 2 [Source:HGNC Symbol;Acc:HGNC:13291]	10371	-0.19852791726589203	-0.12803774	No	
+row_77	MAP1LC3A	microtubule associated protein 1 light chain 3 alpha [Source:HGNC Symbol;Acc:HGNC:6838]	10399	-0.20076753199100494	-0.12138895	No	
+row_78	GABARAP	GABA type A receptor-associated protein [Source:HGNC Symbol;Acc:HGNC:4067]	10487	-0.20721247792243958	-0.11863977	No	
+row_79	ANXA7	annexin A7 [Source:HGNC Symbol;Acc:HGNC:545]	10620	-0.2165905088186264	-0.118622296	No	
+row_80	BECN1	beclin 1 [Source:HGNC Symbol;Acc:HGNC:1034]	10657	-0.21919193863868713	-0.11181701	No	
+row_81	ATG4B	autophagy related 4B cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:20790]	10700	-0.222755566239357	-0.1052777	No	
+row_82	ULK3	unc-51 like kinase 3 [Source:HGNC Symbol;Acc:HGNC:19703]	10950	-0.24122577905654907	-0.11235194	No	
+row_83	RAB1A	"RAB1A, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:9758]"	11091	-0.25108134746551514	-0.111426055	No	
+row_84	RAB1B	"RAB1B, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:18370]"	11128	-0.253526896238327	-0.10316253	No	
+row_85	ATG10	autophagy related 10 [Source:HGNC Symbol;Acc:HGNC:20315]	11211	-0.259469598531723	-0.09784616	No	
+row_86	TM9SF1	transmembrane 9 superfamily member 1 [Source:HGNC Symbol;Acc:HGNC:11864]	11361	-0.2726946473121643	-0.09662834	No	
+row_87	XBP1	X-box binding protein 1 [Source:HGNC Symbol;Acc:HGNC:12801]	11618	-0.29296112060546875	-0.10199222	No	
+row_88	DAP	death associated protein [Source:HGNC Symbol;Acc:HGNC:2672]	11643	-0.2954684793949127	-0.091112725	No	
+row_89	BNIP1	BCL2 interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:1082]	11681	-0.2984851598739624	-0.081009336	No	
+row_90	VPS51	VPS51 subunit of GARP complex [Source:HGNC Symbol;Acc:HGNC:1172]	11757	-0.30609458684921265	-0.07322587	No	
+row_91	ATG4D	autophagy related 4D cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:20789]	11857	-0.31749776005744934	-0.06662744	No	
+row_92	WDR45B	WD repeat domain 45B [Source:HGNC Symbol;Acc:HGNC:25072]	11945	-0.32661622762680054	-0.058807075	No	
+row_93	EI24	EI24 autophagy associated transmembrane protein [Source:HGNC Symbol;Acc:HGNC:13276]	12703	-0.41660597920417786	-0.09376697	No	
+row_94	FIS1	"fission, mitochondrial 1 [Source:HGNC Symbol;Acc:HGNC:21689]"	13022	-0.46776390075683594	-0.09601925	No	
+row_95	PARK7	Parkinsonism associated deglycase [Source:HGNC Symbol;Acc:HGNC:16369]	13150	-0.48901036381721497	-0.08408408	No	
+row_96	RAB24	"RAB24, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:9765]"	13249	-0.5055257081985474	-0.069430366	No	
+row_97	TMEM208	transmembrane protein 208 [Source:HGNC Symbol;Acc:HGNC:25015]	13274	-0.5094995498657227	-0.04946077	No	
+row_98	FUNDC2	FUN14 domain containing 2 [Source:HGNC Symbol;Acc:HGNC:24925]	13305	-0.517470121383667	-0.02956999	No	
+row_99	MAP1S	microtubule associated protein 1S [Source:HGNC Symbol;Acc:HGNC:15715]	13376	-0.5334390997886658	-0.011783212	No	
+row_100	RGS19	regulator of G protein signaling 19 [Source:HGNC Symbol;Acc:HGNC:13735]	13558	-0.5791776776313782	2.2545802E-4	No	
+row_101	S100A9	S100 calcium binding protein A9 [Source:HGNC Symbol;Acc:HGNC:10499]	13723	-0.6283468008041382	0.015504833	No	
+row_102	S100A8	S100 calcium binding protein A8 [Source:HGNC Symbol;Acc:HGNC:10498]	14164	-0.8714101910591125	0.02191001	No	

@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	FCGR2B	Fc fragment of IgG receptor IIb [Source:HGNC Symbol;Acc:HGNC:3618]	1	3.1327011585235596	0.22384708	No	
+row_1	FCGR2A	Fc fragment of IgG receptor IIa [Source:HGNC Symbol;Acc:HGNC:3616]	693	0.760185182094574	0.23036943	No	
+row_2	CD93	CD93 molecule [Source:HGNC Symbol;Acc:HGNC:15855]	873	0.6792199611663818	0.26653224	No	
+row_3	CD74	CD74 molecule [Source:HGNC Symbol;Acc:HGNC:1697]	1924	0.4310302734375	0.22468673	No	
+row_4	TLR4	toll like receptor 4 [Source:HGNC Symbol;Acc:HGNC:11850]	3660	0.2355978786945343	0.12147398	No	
+row_5	TLR3	toll like receptor 3 [Source:HGNC Symbol;Acc:HGNC:11849]	4065	0.20433880388736725	0.108124904	No	
+row_6	CX3CR1	C-X3-C motif chemokine receptor 1 [Source:HGNC Symbol;Acc:HGNC:2558]	5043	0.13219355046749115	0.049970616	No	
+row_7	ITGAM	integrin subunit alpha M [Source:HGNC Symbol;Acc:HGNC:6149]	5936	0.07661322504281998	-0.006274858	No	
+row_8	PROS1	protein S [Source:HGNC Symbol;Acc:HGNC:9456]	6124	0.06533396244049072	-0.014544364	No	
+row_9	FCGR3A	Fc fragment of IgG receptor IIIa [Source:HGNC Symbol;Acc:HGNC:3619]	7101	0.005884857382625341	-0.08165764	No	
+row_10	CD274	CD274 molecule [Source:HGNC Symbol;Acc:HGNC:17635]	7461	-0.014987677335739136	-0.10542721	No	
+row_11	CD86	CD86 molecule [Source:HGNC Symbol;Acc:HGNC:1705]	7863	-0.039321642369031906	-0.13036364	No	
+row_12	GAS6	growth arrest specific 6 [Source:HGNC Symbol;Acc:HGNC:4168]	9007	-0.1074914038181305	-0.20176987	No	
+row_13	CD163	CD163 molecule [Source:HGNC Symbol;Acc:HGNC:1631]	9031	-0.10879809409379959	-0.19558477	No	
+row_14	CD209	CD209 molecule [Source:HGNC Symbol;Acc:HGNC:1641]	9760	-0.15775571763515472	-0.23468252	No	
+row_15	GPR34	G protein-coupled receptor 34 [Source:HGNC Symbol;Acc:HGNC:4490]	9957	-0.1711501032114029	-0.23601134	No	
+row_16	SIRPA	signal regulatory protein alpha [Source:HGNC Symbol;Acc:HGNC:9662]	10241	-0.189577117562294	-0.24204299	No	
+row_17	MERTK	"MER proto-oncogene, tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:7027]"	10672	-0.22005929052829742	-0.25606748	No	
+row_18	C1QA	complement C1q A chain [Source:HGNC Symbol;Acc:HGNC:1241]	10995	-0.24500910937786102	-0.2608356	No	
+row_19	CLEC7A	C-type lectin domain containing 7A [Source:HGNC Symbol;Acc:HGNC:14558]	11478	-0.28125038743019104	-0.27408442	No	
+row_20	CD40	CD40 molecule [Source:HGNC Symbol;Acc:HGNC:11919]	11731	-0.304095983505249	-0.26978558	No	
+row_21	TREM2	triggering receptor expressed on myeloid cells 2 [Source:HGNC Symbol;Acc:HGNC:17761]	12870	-0.44147324562072754	-0.31697378	No	
+row_22	P2RY12	purinergic receptor P2Y12 [Source:HGNC Symbol;Acc:HGNC:18124]	13452	-0.5554084777832031	-0.31747687	Yes	
+row_23	CNR2	cannabinoid receptor 2 [Source:HGNC Symbol;Acc:HGNC:2160]	13785	-0.651263415813446	-0.29389906	Yes	
+row_24	FCGR1B	Fc fragment of IgG receptor Ib [Source:HGNC Symbol;Acc:HGNC:3614]	13991	-0.7465680837631226	-0.25472146	Yes	
+row_25	FCGR1A	Fc fragment of IgG receptor Ia [Source:HGNC Symbol;Acc:HGNC:3613]	14303	-1.066736102104187	-0.19999382	Yes	
+row_26	TMEM119	transmembrane protein 119 [Source:HGNC Symbol;Acc:HGNC:27884]	14341	-1.136405110359192	-0.12132712	Yes	
+row_27	SIGLEC11	sialic acid binding Ig like lectin 11 [Source:HGNC Symbol;Acc:HGNC:15622]	14452	-1.8300502300262451	0.0018680893	Yes	

@@ -1,0 +1,12 @@
+name: "personal-website"
+output_dir: "."
+navbar:
+  title: "RNAseq-iPSC microglia"
+  left:
+ 
+    - text: "Clustering analysis"
+      href: de_analysis.html
+    - text: "Differential expression"
+      href: differential_expression_iPSC.html
+    - text: "Comparison to other experiments"
+      href: comparison_iPSC.html

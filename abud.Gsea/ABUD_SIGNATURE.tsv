@@ -1,0 +1,55 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CCR6	C-C motif chemokine receptor 6 [Source:HGNC Symbol;Acc:HGNC:1607]	113	1.4173022508621216	0.05217417	No	
+row_1	MMP9	matrix metallopeptidase 9 [Source:HGNC Symbol;Acc:HGNC:7176]	909	0.6649791598320007	0.025219932	No	
+row_2	APOE	apolipoprotein E [Source:HGNC Symbol;Acc:HGNC:613]	1761	0.45742446184158325	-0.014403855	No	
+row_3	TMEM86A	transmembrane protein 86A [Source:HGNC Symbol;Acc:HGNC:26890]	2818	0.317535400390625	-0.07416087	No	
+row_4	ABCA7	ATP binding cassette subfamily A member 7 [Source:HGNC Symbol;Acc:HGNC:37]	4449	0.17436173558235168	-0.179769	No	
+row_5	CTSD	cathepsin D [Source:HGNC Symbol;Acc:HGNC:2529]	4562	0.16661454737186432	-0.18047845	No	
+row_6	AXL	AXL receptor tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:905]	4661	0.1598794311285019	-0.1805026	No	
+row_7	TGFBR1	transforming growth factor beta receptor 1 [Source:HGNC Symbol;Acc:HGNC:11772]	4790	0.14992204308509827	-0.18302791	No	
+row_8	CX3CR1	C-X3-C motif chemokine receptor 1 [Source:HGNC Symbol;Acc:HGNC:2558]	5043	0.13219355046749115	-0.19489941	No	
+row_9	BHLHE41	basic helix-loop-helix family member e41 [Source:HGNC Symbol;Acc:HGNC:16617]	5126	0.1272355318069458	-0.19519655	No	
+row_10	SLCO2B1	solute carrier organic anion transporter family member 2B1 [Source:HGNC Symbol;Acc:HGNC:10962]	5160	0.12537698447704315	-0.19217575	No	
+row_11	CSF1R	colony stimulating factor 1 receptor [Source:HGNC Symbol;Acc:HGNC:2433]	5691	0.09267015010118484	-0.22499141	No	
+row_12	ADORA3	adenosine A3 receptor [Source:HGNC Symbol;Acc:HGNC:268]	5923	0.07762999087572098	-0.23771738	No	
+row_13	PROS1	protein S [Source:HGNC Symbol;Acc:HGNC:9456]	6124	0.06533396244049072	-0.24881506	No	
+row_14	NPL	N-acetylneuraminate pyruvate lyase [Source:HGNC Symbol;Acc:HGNC:16781]	6528	0.040734753012657166	-0.27502605	No	
+row_15	DAB2	DAB adaptor protein 2 [Source:HGNC Symbol;Acc:HGNC:2662]	7007	0.012127341702580452	-0.30764723	No	
+row_16	OLFML3	olfactomedin like 3 [Source:HGNC Symbol;Acc:HGNC:24956]	7108	0.0056455363519489765	-0.3143401	No	
+row_17	PALD1	phosphatase domain containing paladin 1 [Source:HGNC Symbol;Acc:HGNC:23530]	7194	6.05916022323072E-4	-0.3202066	No	
+row_18	ADGRG1	adhesion G protein-coupled receptor G1 [Source:HGNC Symbol;Acc:HGNC:4512]	7957	-0.04617692157626152	-0.3710728	No	
+row_19	SLC7A8	solute carrier family 7 member 8 [Source:HGNC Symbol;Acc:HGNC:11066]	8021	-0.049077656120061874	-0.37336203	No	
+row_20	ENG	endoglin [Source:HGNC Symbol;Acc:HGNC:3349]	8229	-0.06090833991765976	-0.3851323	No	
+row_21	GAS6	growth arrest specific 6 [Source:HGNC Symbol;Acc:HGNC:4168]	9007	-0.1074914038181305	-0.4344423	No	
+row_22	STAB1	stabilin 1 [Source:HGNC Symbol;Acc:HGNC:18628]	9394	-0.13238215446472168	-0.45559463	No	
+row_23	PLA2G15	phospholipase A2 group XV [Source:HGNC Symbol;Acc:HGNC:17163]	9738	-0.15650813281536102	-0.47274473	No	
+row_24	RGS10	regulator of G protein signaling 10 [Source:HGNC Symbol;Acc:HGNC:9992]	9857	-0.1637786328792572	-0.47399017	No	
+row_25	GPR34	G protein-coupled receptor 34 [Source:HGNC Symbol;Acc:HGNC:4490]	9957	-0.1711501032114029	-0.47360644	No	
+row_26	PILRA	paired immunoglobin like type 2 receptor alpha [Source:HGNC Symbol;Acc:HGNC:20396]	10085	-0.17893283069133759	-0.47483414	No	
+row_27	C1QC	complement C1q C chain [Source:HGNC Symbol;Acc:HGNC:1245]	10147	-0.18376140296459198	-0.47128233	No	
+row_28	ABHD12	"abhydrolase domain containing 12, lysophospholipase [Source:HGNC Symbol;Acc:HGNC:15868]"	10148	-0.18377894163131714	-0.4635013	No	
+row_29	CD33	CD33 molecule [Source:HGNC Symbol;Acc:HGNC:1659]	10409	-0.20119012892246246	-0.47300613	No	
+row_30	ITGB5	integrin subunit beta 5 [Source:HGNC Symbol;Acc:HGNC:6160]	10482	-0.20699191093444824	-0.46923327	No	
+row_31	CTSL	cathepsin L [Source:HGNC Symbol;Acc:HGNC:2537]	10826	-0.23204833269119263	-0.48318508	No	
+row_32	CABLES1	Cdk5 and Abl enzyme substrate 1 [Source:HGNC Symbol;Acc:HGNC:25097]	10916	-0.238517627120018	-0.47925588	No	
+row_33	C1QA	complement C1q A chain [Source:HGNC Symbol;Acc:HGNC:1241]	10995	-0.24500910937786102	-0.47428933	No	
+row_34	C1QB	complement C1q B chain [Source:HGNC Symbol;Acc:HGNC:1242]	11780	-0.30949896574020386	-0.5155317	Yes	
+row_35	P2RX4	purinergic receptor P2X 4 [Source:HGNC Symbol;Acc:HGNC:8535]	11854	-0.31724023818969727	-0.5071604	Yes	
+row_36	SPI1	Spi-1 proto-oncogene [Source:HGNC Symbol;Acc:HGNC:11241]	11994	-0.33087462186813354	-0.5027869	Yes	
+row_37	RGL1	ral guanine nucleotide dissociation stimulator like 1 [Source:HGNC Symbol;Acc:HGNC:30281]	12072	-0.33907774090766907	-0.49376822	Yes	
+row_38	HPGDS	hematopoietic prostaglandin D synthase [Source:HGNC Symbol;Acc:HGNC:17890]	12193	-0.3520072400569916	-0.48718286	Yes	
+row_39	ACP2	"acid phosphatase 2, lysosomal [Source:HGNC Symbol;Acc:HGNC:123]"	12207	-0.3541319966316223	-0.4730904	Yes	
+row_40	CHI3L1	chitinase 3 like 1 [Source:HGNC Symbol;Acc:HGNC:1932]	12622	-0.4057895541191101	-0.48460785	Yes	
+row_41	CRYBB1	crystallin beta B1 [Source:HGNC Symbol;Acc:HGNC:2397]	12748	-0.42317360639572144	-0.47535598	Yes	
+row_42	RUNX1	RUNX family transcription factor 1 [Source:HGNC Symbol;Acc:HGNC:10471]	12760	-0.424302339553833	-0.45815393	Yes	
+row_43	TREM2	triggering receptor expressed on myeloid cells 2 [Source:HGNC Symbol;Acc:HGNC:17761]	12870	-0.44147324562072754	-0.44701815	Yes	
+row_44	P2RY6	pyrimidinergic receptor P2Y6 [Source:HGNC Symbol;Acc:HGNC:8543]	13387	-0.5364441275596619	-0.46007437	Yes	
+row_45	P2RY12	purinergic receptor P2Y12 [Source:HGNC Symbol;Acc:HGNC:18124]	13452	-0.5554084777832031	-0.44099534	Yes	
+row_46	ETV5	ETS variant transcription factor 5 [Source:HGNC Symbol;Acc:HGNC:3494]	13638	-0.6020569801330566	-0.42832887	Yes	
+row_47	PPARD	peroxisome proliferator activated receptor delta [Source:HGNC Symbol;Acc:HGNC:9235]	13707	-0.6233084201812744	-0.40665227	Yes	
+row_48	PMEPA1	"prostate transmembrane protein, androgen induced 1 [Source:HGNC Symbol;Acc:HGNC:14107]"	14069	-0.7959128022193909	-0.39797834	Yes	
+row_49	CCL2	C-C motif chemokine ligand 2 [Source:HGNC Symbol;Acc:HGNC:10618]	14148	-0.8505591750144958	-0.36737338	Yes	
+row_50	GPR84	G protein-coupled receptor 84 [Source:HGNC Symbol;Acc:HGNC:4535]	14288	-1.0348825454711914	-0.3331928	Yes	
+row_51	IL1A	interleukin 1 alpha [Source:HGNC Symbol;Acc:HGNC:5991]	14296	-1.0430715084075928	-0.28951538	Yes	
+row_52	CCL4	C-C motif chemokine ligand 4 [Source:HGNC Symbol;Acc:HGNC:10630]	14473	-2.83040714263916	-0.18187878	Yes	
+row_53	EGR1	early growth response 1 [Source:HGNC Symbol;Acc:HGNC:3238]	14479	-4.303951740264893	-8.322604E-8	Yes	

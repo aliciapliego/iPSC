@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	HLA-DRA	"major histocompatibility complex, class II, DR alpha [Source:HGNC Symbol;Acc:HGNC:4947]"	1649	0.47586992383003235	-0.0871724	No	
+row_1	APOE	apolipoprotein E [Source:HGNC Symbol;Acc:HGNC:613]	1761	0.45742446184158325	-0.068967365	No	
+row_2	NEAT1	nuclear paraspeckle assembly transcript 1 [Source:HGNC Symbol;Acc:HGNC:30815]	1918	0.4319632053375244	-0.055316936	No	
+row_3	CD74	CD74 molecule [Source:HGNC Symbol;Acc:HGNC:1697]	1924	0.4310302734375	-0.031270925	No	
+row_4	C3	complement C3 [Source:HGNC Symbol;Acc:HGNC:1318]	3706	0.23196081817150116	-0.14137982	No	
+row_5	PSAP	prosaposin [Source:HGNC Symbol;Acc:HGNC:9498]	4890	0.14237885177135468	-0.21517979	No	
+row_6	CX3CR1	C-X3-C motif chemokine receptor 1 [Source:HGNC Symbol;Acc:HGNC:2558]	5043	0.13219355046749115	-0.21821652	No	
+row_7	SLCO2B1	solute carrier organic anion transporter family member 2B1 [Source:HGNC Symbol;Acc:HGNC:10962]	5160	0.12537698447704315	-0.21914802	No	
+row_8	CSF1R	colony stimulating factor 1 receptor [Source:HGNC Symbol;Acc:HGNC:2433]	5691	0.09267015010118484	-0.25057694	No	
+row_9	ITM2B	integral membrane protein 2B [Source:HGNC Symbol;Acc:HGNC:6174]	5926	0.07735277712345123	-0.2623911	No	
+row_10	A2M	alpha-2-macroglobulin [Source:HGNC Symbol;Acc:HGNC:7]	6179	0.0614795982837677	-0.276349	No	
+row_11	SAT1	spermidine/spermine N1-acetyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:10540]	6625	0.03413477912545204	-0.3052089	No	
+row_12	FTL	ferritin light chain [Source:HGNC Symbol;Acc:HGNC:3999]	7086	0.006532999221235514	-0.3366687	No	
+row_13	CTSB	cathepsin B [Source:HGNC Symbol;Acc:HGNC:2527]	7412	-0.012510206550359726	-0.35844898	No	
+row_14	LAPTM5	lysosomal protein transmembrane 5 [Source:HGNC Symbol;Acc:HGNC:29612]	8526	-0.07834304869174957	-0.4310291	No	
+row_15	ACTB	actin beta [Source:HGNC Symbol;Acc:HGNC:132]	8848	-0.09895095974206924	-0.44764096	No	
+row_16	HLA-B	"major histocompatibility complex, class I, B [Source:HGNC Symbol;Acc:HGNC:4932]"	8896	-0.10091980546712875	-0.44518203	No	
+row_17	CD81	CD81 molecule [Source:HGNC Symbol;Acc:HGNC:1701]	8915	-0.10198045521974564	-0.44065648	No	
+row_18	C1QC	complement C1q C chain [Source:HGNC Symbol;Acc:HGNC:1245]	10147	-0.18376140296459198	-0.51543593	No	
+row_19	RNASET2	ribonuclease T2 [Source:HGNC Symbol;Acc:HGNC:21686]	10960	-0.24234256148338318	-0.55790776	No	
+row_20	C1QA	complement C1q A chain [Source:HGNC Symbol;Acc:HGNC:1241]	10995	-0.24500910937786102	-0.54639536	No	
+row_21	C1QB	complement C1q B chain [Source:HGNC Symbol;Acc:HGNC:1242]	11780	-0.30949896574020386	-0.58312935	No	
+row_22	P2RY12	purinergic receptor P2Y12 [Source:HGNC Symbol;Acc:HGNC:18124]	13452	-0.5554084777832031	-0.66732293	Yes	
+row_23	RGS1	regulator of G protein signaling 1 [Source:HGNC Symbol;Acc:HGNC:9991]	14422	-1.4572654962539673	-0.6519059	Yes	
+row_24	ZFP36	ZFP36 ring finger protein [Source:HGNC Symbol;Acc:HGNC:12862]	14450	-1.8033026456832886	-0.5517253	Yes	
+row_25	CCL4L2	C-C motif chemokine ligand 4 like 2 [Source:HGNC Symbol;Acc:HGNC:24066]	14469	-2.436584234237671	-0.41508466	Yes	
+row_26	DUSP1	dual specificity phosphatase 1 [Source:HGNC Symbol;Acc:HGNC:3064]	14476	-3.431206226348877	-0.22132802	Yes	
+row_27	FOS	"Fos proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:3796]"	14478	-3.9135286808013916	6.9192974E-5	Yes	

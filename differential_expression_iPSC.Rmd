@@ -1,0 +1,318 @@
+---
+title: "Differential expression analysis"
+author: "Alicia Pliego"
+date: "3/16/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE}
+library("DESeq2")
+library(tximport)
+library(plotly)
+library(pheatmap)
+library(org.Hs.eg.db)
+library(DOSE)
+library(pathview)
+library(clusterProfiler)
+library(AnnotationHub)
+library(ensembldb)
+library(tidyverse)
+  library(EnhancedVolcano)
+library(ComplexHeatmap)
+```
+
+
+# Differential expression analysis using DESeq2
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# txi import quant files by genes from salmon into DESEQ2
+
+counts <- read.table('/Users/aliciapliego/Projects/iPSC/data/Count_QC-raw-count_v3.txt', header = TRUE)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+counts_nondup <- subset(counts, !duplicated(subset(counts, select=c(gene_name))))
+rownames(counts_nondup) <- counts_nondup$gene_name
+counts_nondup$gene_name <- NULL
+```
+
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE}
+metadata =readxl::read_excel('/Users/aliciapliego/Projects/iPSC/data/metadata_v2.xlsx')
+
+fig <- plot_ly(
+  type = 'table',
+  header = list(
+    values = c("<b>Samples</b>", names(metadata)),
+  align = c('left', rep('center', ncol(metadata))),
+  line = list(width = 1, color = 'black'),
+  fill = list(color = 'rgb(235, 100, 230)'),
+  font = list(family = "Arial", size = 14, color = "white")
+  ),
+  cells = list(
+    values = rbind(
+      rownames(metadata), 
+      t(as.matrix(unname(metadata)))
+    ),
+    align = c('left', rep('center', ncol(metadata))),
+    line = list(color = "black", width = 1),
+    fill = list(color = c('rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)')),
+    font = list(family = "Arial", size = 12, color = c("black"))
+  ))
+
+fig
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+dds <- DESeqDataSetFromMatrix(countData = round(counts_nondup),
+                              colData = metadata,
+                              design = ~ Type)
+```
+### Samples to compare in the Differential Analysis
+Excluding sample tw047 from the analysis, a Differential expression analysis was performed:
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#do filtering steps as for the clustering analysis
+is_expressed <- assay(dds) >= 10
+keep <- rowSums(assay(dds) >= 10) >= 2
+dds <- dds[keep,]
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dds <- DESeq(dds)
+res <- results(dds)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+resLFC <- lfcShrink(dds, coef= "Type_tw029_vs_av111", type="apeglm")
+```
+## Comparison treated vs untreated groups 
+Summary of differentially expressed genes:
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+resOrdered <- res[order(res$pvalue),]
+summary(res)
+```
+
+Summary of differentially expressed genes.
+Adjusting cut-off for and FDR of 0.05:
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+res05 <- results(dds, alpha=0.05, contrast = c("Type", "tw029", "av111"))
+summary(res05)
+```
+
+Cutoff values:
+  pvalue  = 10e-16
+  FCcutoff = 1.5
+
+### Volcano plot 
+Genes upregulated in the treated sample are in the right of the volcano plot, whilst downregulated genes are in the left hand side.
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 8, fig.height = 9, fig.align='center'}
+EnhancedVolcano(res05,
+    lab = rownames(res05),
+    title = 'tw029 vs av111',
+    pCutoff = 10e-16,
+    FCcutoff = 1.5,
+    x = 'log2FoldChange',
+    y = 'pvalue')
+
+```
+
+### Interactive volcano plot
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+res05_df <- as.data.frame(res05)
+res05_df$log10P <- -log10(res05_df$pvalue) 
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 8, fig.height = 9, fig.align='center'}
+library(plotly)
+
+vline <- function(x = 0, color = "red") {
+  list(
+    type = "line", 
+    y0 = 0, 
+    y1 = 1, 
+    yref = "paper",
+    x0 = x, 
+    x1 = x, 
+    line = list(color = color)
+  )
+}
+hline <- function(y = 0, color = "blue") {
+  list(
+    type = "line", 
+    x0 = 0, 
+    x1 = 1, 
+    xref = "paper",
+    y0 = y, 
+    y1 = y, 
+    line = list(color = color)
+  )
+}
+
+
+fig <- plot_ly(data = res05_df, x = ~res05_df$log2FoldChange, y = ~res05_df$log10P,
+               text= rownames(res05_df), color = ~res05_df$log2FoldChange) %>%
+  layout(xaxis = list(title = 'log2FoldChange'), font=t, plot_bgcolor = "#e5ecf6",
+         yaxis = list(title = '-log10(Pval)'), legend = list(title=list(text='Legend Title')), shapes = list(vline(2.5), hline(20)))
+
+fig 
+```
+
+### Counts of most differentially expressed gene
+
+Expression of some microglia markers.
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 5, fig.height = 5, fig.align='center'}
+# Save plotcounts to a data frame object
+d <- plotCounts(dds, gene="TREM2", intgroup="Type", returnData=TRUE)
+
+# Plotting the CTNNB1 normalized counts, using the samplenames (rownames of d as labels)
+ggplot(d, aes(x = Type, y = count, color = Type)) + 
+  geom_point(position=position_jitter(w = 0.1,h = 0)) +
+  geom_text_repel(aes(label = rownames(d))) + 
+  theme_bw() +
+  ggtitle("TREM2") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 5, fig.height = 5, fig.align='center'}
+# Save plotcounts to a data frame object
+par(mfrow=c(2,3))
+
+d <- plotCounts(dds, gene="MPEG1", intgroup="Type", returnData=TRUE)
+
+# Plotting the CTNNB1 normalized counts, using the samplenames (rownames of d as labels)
+ggplot(d, aes(x = Type, y = count, color = Type)) + 
+  geom_point(position=position_jitter(w = 0.1,h = 0)) +
+  geom_text_repel(aes(label = rownames(d))) + 
+  theme_bw() +
+  ggtitle("MPEG1") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+```
+
+### Counts of other Differenatially expressed genes
+
+From 9 out the 10 genes microglia signature from Mancuso 2019 does not seem that any gene is DE, however, in av111_001 shows different pattern of expression in some genes, which can be the reason of the difference with respect to the other groups.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 8, fig.height = 5, fig.align='center'}
+# Save plotcounts to a data frame object
+
+par(mfrow=c(3,3))
+
+plotCounts(dds, gene="CX3CR1", intgroup="Type")
+plotCounts(dds, gene="TMEM119", intgroup="Type")
+plotCounts(dds, gene="P2RY12", intgroup="Type")
+plotCounts(dds, gene="ELMO1", intgroup="Type")
+plotCounts(dds, gene="P2RY13", intgroup="Type")
+plotCounts(dds, gene="CSF1R", intgroup="Type")
+plotCounts(dds, gene="SFMBT2", intgroup="Type")
+plotCounts(dds, gene="IFNGR1", intgroup="Type")
+plotCounts(dds, gene="GPR34", intgroup="Type")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Further filter DE genes based on Padj = 0.01,  and FC>1.5(L2FC = 0.58)
+res_filtered_pval <- subset(res05, padj <0.01)
+res_filtered_all <- subset(res_filtered_pval, log2FoldChange >0.58)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Rank genes and export for GSEA analysis
+x <- res_filtered_pval
+x$fcsign <- sign(x$log2FoldChange )
+x$logP=-log10(x$pvalue)
+x$metric= x$logP/x$fcsign
+x$Gene <- rownames(x)
+y<-x[,c("Gene", "metric")]
+filtered <- na.omit(y)
+write.table(filtered ,file="/Users/aliciapliego/Projects/iPSC/data/DE_genes.rnk",quote=F,sep="\t",row.names=F)
+```
+
+## Heatmap of top 50 DE genes
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#Select TOP 20 DE genes by pvalue
+res_df<- as.data.frame(res_filtered_pval)
+resOrdered   <- res_df[order(res_df$pvalue),]
+resOrdered50 <- resOrdered[1:50,]
+top50genes   <- rownames(resOrdered50)
+top50genes   <- as.data.frame(top50genes)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#Normalize results
+dds <- estimateSizeFactors(dds)
+normalized_counts <- counts(dds, normalized=T) %>% 
+                     data.frame() %>%
+                     rownames_to_column(var="gene") 
+write.table(normalized_counts ,file="/Users/aliciapliego/Projects/iPSC/data/normalized_counts.txt",quote=F,sep="\t",row.names=F)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+## This will bring in a column of gene symbols
+top50_counts<- merge(normalized_counts, top50genes, by.x="gene", by.y="top50genes")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+top50_counts2 <- top50_counts[,-1]
+rownames(top50_counts2) <- top50_counts[,1]
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+vst <- vst(dds, blind=FALSE)
+vst <- assay(vst)
+vst <- as.data.frame(vst)
+vst_sig <- vst[rownames(vst) %in% rownames(top50_counts2),]
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+heat <- t(scale(t(vst_sig)))
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+Heatmap(heat, 
+      row_names_gp = gpar(fontsize = 8),
+    top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4),
+        labels = c("tw029", "av111"), 
+        labels_gp = gpar(col = "white", fontsize = 10))),
+    column_km = 2)
+```
+
+
+## GSEA results
+### General enrichment of DE genes in tw029 vs av111
+
+Enriched pathways with a pval <0.05 for the different microglia markers.
+
+Link to enrichment results:
+
+#### Abud signature
+Read more [here](abud.Gsea/ABUD_SIGNATURE.html) 
+
+#### Gosselin signature
+Read more [here](gosselin.Gsea/GOSSELIN_SIGNATURE.html) 
+
+#### Hasselman signature
+Read more [here](hasselman.Gsea/HASSELMAN.html) 
+
+#### Haensler signature
+Read more [here](haensler.Gsea/HAENSLER.html) 
+
+#### Tissue microglia signature
+Read more [here](tissue_microglia.Gsea/TISSUE_MICROGLIA.html) 
+
+#### Autophagy signature
+Read more [here](autophagy.Gsea/AUTOPHAGY.html) 
+
+#### Activated microglia signature
+Read more [here](activated_microglia.Gsea/ACTIVATED_MICROGLIA.html) 
+
