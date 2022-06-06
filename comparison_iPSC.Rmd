@@ -17,7 +17,7 @@ library(clusterProfiler)
 library(AnnotationHub)
 library(ensembldb)
 library(tidyverse)
-  library(EnhancedVolcano)
+library(EnhancedVolcano)
 library(ComplexHeatmap)
 ```
 
@@ -31,6 +31,114 @@ counts <- read.table('/Users/aliciapliego/Projects/iPSC/data/GSE117829_av111.txt
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+counts_nondup <- subset(counts, !duplicated(subset(counts, select=c(Gene))))
+rownames(counts_nondup) <- counts_nondup$Gene
+counts_nondup$Gene <- NULL
+```
+
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE}
+metadata =read.table('/Users/aliciapliego/Projects/iPSC/data/metadata_GSE117829_av111.txt', header = TRUE)
+
+fig <- plot_ly(
+  type = 'table',
+  header = list(
+    values = c("<b>Samples</b>", names(metadata)),
+  align = c('left', rep('center', ncol(metadata))),
+  line = list(width = 1, color = 'black'),
+  fill = list(color = 'rgb(235, 100, 230)'),
+  font = list(family = "Arial", size = 14, color = "white")
+  ),
+  cells = list(
+    values = rbind(
+      rownames(metadata), 
+      t(as.matrix(unname(metadata)))
+    ),
+    align = c('left', rep('center', ncol(metadata))),
+    line = list(color = "black", width = 1),
+    fill = list(color = c('rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)')),
+    font = list(family = "Arial", size = 12, color = c("black"))
+  ))
+
+fig
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dds <- DESeqDataSetFromMatrix(countData = round(counts_nondup),
+                              colData = metadata,
+                              design = ~ Type)
+```
+### Samples to compare in the Differential Analysis
+Excluding sample tw047 from the analysis, a Differential expression analysis was performed:
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#do filtering steps as for the clustering analysis
+is_expressed <- assay(dds) >= 10
+keep <- rowSums(assay(dds) >= 10) >= 2
+dds <- dds[keep,]
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dds <- DESeq(dds)
+res <- results(dds)
+```
+
+```{r,include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+# Get log2 counts
+vsd <- vst(dds,blind=TRUE)
+```
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+
+# Check distributions of samples using boxplots
+boxplot(assay(vsd), xlab="", ylab="Log2 counts per million",las=2,main="Normalised Distributions")
+# Let's add a blue horizontal line that corresponds to the median logCPM
+abline(h=median(assay(vsd)), col="blue")
+```
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+
+plotPCA(vsd,intgroup="Type")
+
+```
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+
+plotPCA(vsd,intgroup="Sample")
+```
+
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE}
+sampleDists <- dist(t(assay(vsd)))
+```
+
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+library(RColorBrewer)
+library(pheatmap)
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- paste(colData(dds)$Sample, colData(dds)$Status, sep="-")
+colnames(sampleDistMatrix) <- colData(dds)$Sample
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pheatmap(sampleDistMatrix,
+         col=colors)
+```
+
+
+
+
+
+# Differential expression analysis using DESeq2
+Comparison of av111 and tw029 with McQuade et al., 2018 GSE117829 and Chen et al 2021
+
+https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(21)00140-5?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2213671121001405%3Fshowall%3Dtrue
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+counts <- read.table('/Users/aliciapliego/Projects/iPSC/data/GSE117829_av111_GSE163984.txt', header = TRUE)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 counts_nondup <- subset(counts, !duplicated(subset(counts, select=c(gene_name))))
 rownames(counts_nondup) <- counts_nondup$gene_name
 counts_nondup$gene_name <- NULL
@@ -39,7 +147,7 @@ counts_nondup$Gene <- NULL
 
 
 ```{r,  echo=FALSE, warning=FALSE, message=FALSE}
-metadata =read.table('/Users/aliciapliego/Projects/iPSC/data/metadata_GSE117829_av111.txt', header = TRUE)
+metadata =read.table('/Users/aliciapliego/Projects/iPSC/data/metadata_GSE117829_av111_GSE163984.txt', header = TRUE)
 
 fig <- plot_ly(
   type = 'table',
@@ -97,12 +205,14 @@ boxplot(assay(vsd), xlab="", ylab="Log2 counts per million",las=2,main="Normalis
 abline(h=median(assay(vsd)), col="blue")
 ```
 
-```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+
 plotPCA(vsd,intgroup="Type")
 
 ```
 
-```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+```{r,  echo=FALSE, warning=FALSE, message=FALSE, fig.width= 10, fig.height = 14, fig.align='center'}
+
 plotPCA(vsd,intgroup="Sample")
 ```
 

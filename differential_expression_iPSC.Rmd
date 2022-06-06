@@ -69,6 +69,7 @@ dds <- DESeqDataSetFromMatrix(countData = round(counts_nondup),
                               colData = metadata,
                               design = ~ Type)
 ```
+
 ### Samples to compare in the Differential Analysis
 Excluding sample tw047 from the analysis, a Differential expression analysis was performed:
 
@@ -88,7 +89,8 @@ res <- results(dds)
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 resLFC <- lfcShrink(dds, coef= "Type_tw029_vs_av111", type="apeglm")
 ```
-## Comparison treated vs untreated groups 
+
+## Comparison of the different groups
 Summary of differentially expressed genes:
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 resOrdered <- res[order(res$pvalue),]
